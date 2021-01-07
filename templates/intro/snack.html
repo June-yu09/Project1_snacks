@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<br><br>
+
+<div class='container'>
+
+      
+    {% for snack in snacks %}
+
+        
+    <figure class="figure">
+        {% if snack.image %}
+            <img src=" {{ snack.image.url }} " class="figure-img img-fluid rounded" width="350" height="350">
+        
+        {% endif %}
+
+        <figcaption class="figure-caption"> <b> {{ snack.title }} </b> </figcaption>
+        <figcaption class="figure-caption"> {{ snack.description }} </figcaption>
+
+      </figure>
+
+    
+    
+    {% endfor %}
+
+    
+
+</div>
+
+{% endblock %}
